@@ -1,7 +1,7 @@
 const Contacts = () => {
     return ( 
 <div className = "container">
-    <header>Contact Us</header>
+    <header>Contact Details</header>
 </div>
 )};
 

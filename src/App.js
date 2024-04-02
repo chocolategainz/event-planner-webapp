@@ -4,19 +4,19 @@ import Homepage from './components/pages/Homepage';
 import About from './components/pages/About';
 import Contacts from './components/pages/Contacts';
 
-
 /*Functional Component*/
 function App() {
   return (
     <div className="Nav">
+      
+      <Router>
       <header className="">
       <Navbar /> 
-      </header>
-      <Router>
+      </header>   
        <Routes>
-        <Route exact path = '/' element = {<Homepage />} />
-        <Route exact path = 'About' element = {<About />} />
-        <Route exact path = 'Contact' element = {<Contacts />} />
+        <Route exact path = "/" element = {<Homepage />} />
+        <Route exact path = "/About" element = {<About />} />
+        <Route exact path = "/Contacts" element = {<Contacts />} />
        </Routes>
       </Router>
     </div>
