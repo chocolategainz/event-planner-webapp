@@ -4,6 +4,7 @@ import Homepage from './components/pages/Homepage';
 import About from './components/pages/About';
 import Contacts from './components/pages/Contacts';
 
+
 /*Functional Component*/
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path = "/Contacts" element = {<Contacts />} />
        </Routes>
       </Router>
+
     </div>
   );
 }
