@@ -28,8 +28,6 @@ With each exchanged message, our connection deepened, transcending screens and d
     </body> 
 </div>
 
-
-
 )};
 
 export default About;
