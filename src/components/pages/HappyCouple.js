@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HappyCouple = ({HappyCoupleImage ,height , width} ) => {
+const HappyCouple = ({HappyCoupleImage, height, width} ) => {
 return (
     
     <div className = "image">

@@ -1,0 +1,1 @@
+{/*rsvp and guestbook email verification form*/}

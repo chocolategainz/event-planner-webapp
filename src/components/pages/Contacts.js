@@ -13,6 +13,11 @@ Address   Contact info
   - ....
   - ....
 */
+
+import React from 'react';
+import Venue from './Venue';
+import VenuePicture from './Venue.jpg';
+
 const Contacts = () => {
     return ( 
 <div className = "container">
@@ -64,7 +69,9 @@ const Contacts = () => {
 </div>
 
 {/*Ending page with another image*/}
-
+<div className = "endingImage">
+    <Venue VenuePicture = {VenuePicture} height = {427} width = {900} />
+</div>
  </div>
 
 )};
