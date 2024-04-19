@@ -34,11 +34,11 @@ const nextButton = (e) => {
   <div className = "questionTwo">
     <h3>Will you be attending the wedding?</h3>
     <p> 
-    <input type = "radio" id="attending" value = "Attending"></input>   
+    <input type = "radio" id="attending" name = "weddingAttendance" value = "Attending"></input>   
     <label htmlFor = "attending">Attending</label> 
     
     
-    <input type = "radio" id = "notAttending" value = "Not Attending">Not Attending/</input>
+    <input type = "radio" id = "notAttending" name = "weddingAttendance" value = "Not Attending"></input>
     <label htmlFor = "notAttending">Not Attending</label>
     <button type = "button" className = "previousButton" onClick = {prevButton}>Previous</button>
     <button type = "button" className = "nextButton" onClick = {nextButton}>Next</button>  
