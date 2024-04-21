@@ -91,7 +91,7 @@ const nextButton = (e) => {
     <label htmlFor = "notAttending">Not Attending</label>
 </p>
 <button type = "button" className = "sectionOnePreviousButton" onClick = {prevButton}>Previous</button>
-<button type = "button" className = "sectionOneNextButton" onClick = {nextButton}>Next</button>  
+<button type = "submit" className = "submitButtonSectionFour" onClick = {submit}>Finish</button>  
 </div>
 )}
 
