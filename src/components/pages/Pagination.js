@@ -9,13 +9,28 @@ const [currentPage, setCurrentPage] = useState(1);
 const nextButton = (e) => {
     e.preventDefault();
    setCurrentPage(currentPage + 1);
-    }
+
+   if (currentPage === 2) {
+     const attending = document.getElementById("attending").checked;
+      setCurrentPage(attending ? 3 : 4);
+    } else {
+      setCurrentPage(currentPage + 1);
+    }    
+  };
 
     const prevButton = (e) => {
         e.preventDefault();
         setCurrentPage(currentPage - 1)
     }
 
+    
+ 
+
+    
+
+    const submit = (e) => {
+    e.preventDefault();
+    }
 
     return (
               <div className = "container"> 
@@ -45,7 +60,55 @@ const nextButton = (e) => {
     </p>
 </div>  
 )}
- </form>     
+
+{currentPage === 3 && (
+<div className = "sectionOne">
+<h3>Ceremony</h3>
+<p> 
+<ul>
+  <li>Saturday 12th October 2024, 11:30am</li>
+  <li>location for ceremony</li>
+</ul>
+</p>
+{/*Radio Buttons for section One */}
+<p>
+<input type = "radio" id="attending" name = "weddingAttendance" value = "Attending"></input>   
+    <label htmlFor = "attending">Attending</label> 
+<input type = "radio" id = "notAttending" name = "weddingAttendance" value = "Not Attending"></input>
+    <label htmlFor = "notAttending">Not Attending</label>
+</p>
+
+{/**Reception*/}
+<h3>Reception</h3>
+<p>
+  <ul>
+    <li>Saturday 12th October 2024, 13:30pm</li>
+    <li>Cross Deep, Twickenham, London, TW1 4RB</li>
+  </ul>
+  <input type = "radio" id="attending" name = "weddingAttendance" value = "Attending"></input>   
+    <label htmlFor = "attending">Attending</label> 
+<input type = "radio" id = "notAttending" name = "weddingAttendance" value = "Not Attending"></input>
+    <label htmlFor = "notAttending">Not Attending</label>
+</p>
+<button type = "button" className = "sectionOnePreviousButton" onClick = {prevButton}>Previous</button>
+<button type = "button" className = "sectionOneNextButton" onClick = {nextButton}>Next</button>  
+</div>
+)}
+
+{/**Section Two */}
+
+{currentPage === 4 && (
+  <div className = "sectionTwo">
+<h3>No worries, would you like to send a message to the newly wed couple? </h3>
+<p>
+  <input name = "message" placeholder = "optional" id = "message"></input>
+</p>
+<button type = "submit" id = "submitButton" onClick={submit}>Submit</button>
+<button type = "button" className = "exit">Exit</button>  
+</div>
+)}
+ </form>   
+ 
    </div>
     )
 };
