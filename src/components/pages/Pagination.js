@@ -24,13 +24,17 @@ const nextButton = (e) => {
     }
 
     
- 
-
-    
-
     const submit = (e) => {
     e.preventDefault();
+  const note = document.getElementById("submitButtonSectionFour");
+alert("Thank you for submitting a message to us.");
+console.log(note);
     }
+
+const reset = () => {
+  document.getElementById("resetButton");
+setCurrentPage(1);
+};
 
     return (
               <div className = "container"> 
@@ -72,10 +76,11 @@ const nextButton = (e) => {
 </p>
 {/*Radio Buttons for section One */}
 <p>
-<input type = "radio" id="attending" name = "weddingAttendance" value = "Attending"></input>   
-    <label htmlFor = "attending">Attending</label> 
-<input type = "radio" id = "notAttending" name = "weddingAttendance" value = "Not Attending"></input>
-    <label htmlFor = "notAttending">Not Attending</label>
+<input type = "radio" id="ceremonyAttendance" name = "ceremonyAvailability" value = "Attending"></input>   
+    <label htmlFor = "ceremonyAttendance">Attending</label> 
+    
+<input type = "radio" id = "ceremonyAttendanceDeclined" name = "ceremonyAvailability" value = "Not Attending"></input>
+    <label htmlFor = "ceremonyAttendanceDeclined">Not Attending</label>
 </p>
 
 {/**Reception*/}
@@ -85,13 +90,14 @@ const nextButton = (e) => {
     <li>Saturday 12th October 2024, 13:30pm</li>
     <li>Cross Deep, Twickenham, London, TW1 4RB</li>
   </ul>
-  <input type = "radio" id="attending" name = "weddingAttendance" value = "Attending"></input>   
-    <label htmlFor = "attending">Attending</label> 
-<input type = "radio" id = "notAttending" name = "weddingAttendance" value = "Not Attending"></input>
-    <label htmlFor = "notAttending">Not Attending</label>
+  <input type = "radio" id="receptionAttendance" name = "receptionAvailibility" value = "Attending"></input>   
+    <label htmlFor = "receptionAttendance">Attending</label>
+
+<input type = "radio" id = "receptionAttendanceDeclined" name = "receptionAvailibility" value = "Not Attending"></input>
+    <label htmlFor = "receptionAttendanceDeclined">Not Attending</label>
 </p>
 <button type = "button" className = "sectionOnePreviousButton" onClick = {prevButton}>Previous</button>
-<button type = "submit" className = "submitButtonSectionFour" onClick = {submit}>Finish</button>  
+<button type = "submit" id = "submitButtonSectionFour" onClick = {submit}>Finish</button>  
 </div>
 )}
 
@@ -104,7 +110,7 @@ const nextButton = (e) => {
   <input name = "message" placeholder = "optional" id = "message"></input>
 </p>
 <button type = "submit" id = "submitButton" onClick={submit}>Submit</button>
-<button type = "button" className = "exit">Exit</button>  
+<button type = "reset" id = "resetButton" onClick = {reset}>Reset</button> 
 </div>
 )}
  </form>   
