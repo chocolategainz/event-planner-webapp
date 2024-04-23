@@ -6,6 +6,7 @@ const Pagination = () => {
 const [currentPage, setCurrentPage] = useState(1); 
 
 
+
 const nextButton = (e) => {
     e.preventDefault();
    setCurrentPage(currentPage + 1);
@@ -46,14 +47,15 @@ setCurrentPage(1);
     return (
               <div className = "container"> 
               <form> 
+
             {currentPage === 1 && (  
     <div className = "questionOne">
 <h3>Please enter your name:</h3>
 
-        <input name = "firstname" placeholder = "first name" id="firstName" required></input>
-        <input name = "lastname" placeholder = "last name" id="lastName" required></input>
+        <input name = "firstname" placeholder = "first name" id="firstName"></input>
+        <input name = "lastname" placeholder = "last name" id="lastName" ></input>
   <h3>Please enter your email address:</h3>
-  <input name = "email" placeholder = "example@gmail.com" id = "email" required></input>
+  <input name = "email" placeholder = "example@gmail.com" id = "email" ></input>
         <button type = "button" className = "nextButton" onClick = {nextButton}>Next</button>
     </div>
 )}
