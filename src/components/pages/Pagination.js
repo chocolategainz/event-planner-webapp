@@ -26,10 +26,16 @@ const nextButton = (e) => {
     
     const submit = (e) => {
     e.preventDefault();
-  const note = document.getElementById("submitButtonSectionFour");
+  const note = document.getElementById("submitButton");
 alert("Thank you for submitting a message to us.");
 console.log(note);
     }
+
+    const finished = (e) => {
+       e.preventDefault();
+       alert("Thank you! You are now officially added to our guestbook. All of your details will be forwarded to ...")
+    }
+
 
 const reset = () => {
   document.getElementById("resetButton");
@@ -97,7 +103,7 @@ setCurrentPage(1);
     <label htmlFor = "receptionAttendanceDeclined">Not Attending</label>
 </p>
 <button type = "button" className = "sectionOnePreviousButton" onClick = {prevButton}>Previous</button>
-<button type = "submit" id = "submitButtonSectionFour" onClick = {submit}>Finish</button>  
+<button type = "submit" id = "submitButtonSectionFour" onClick = {finished}>Finish</button>  
 </div>
 )}
 
