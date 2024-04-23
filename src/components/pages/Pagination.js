@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 const Pagination = () => { 
     
 const [currentPage, setCurrentPage] = useState(1); 
-
+const [requiredValue , setRequiredValue] = useState("");
 
 
 const nextButton = (e) => {
@@ -46,17 +46,17 @@ setCurrentPage(1);
 
     return (
               <div className = "container"> 
-              <form> 
+              <form onClick={(e) => e.preventDefault()}> 
 
             {currentPage === 1 && (  
     <div className = "questionOne">
 <h3>Please enter your name:</h3>
 
-        <input name = "firstname" placeholder = "first name" id="firstName"></input>
-        <input name = "lastname" placeholder = "last name" id="lastName" ></input>
+        <input name = "firstname" placeholder = "first name" id="firstName" value = {requiredValue} onChange = {(e) => setRequiredValue(e.target.value)}></input>
+        <input name = "lastname" placeholder = "last name" id="lastName" value = {requiredValue} onChange = {(e) => setRequiredValue(e.target.value)}></input>
   <h3>Please enter your email address:</h3>
-  <input name = "email" placeholder = "example@gmail.com" id = "email" ></input>
-        <button type = "button" className = "nextButton" onClick = {nextButton}>Next</button>
+  <input name = "email" placeholder = "example@gmail.com" id = "email" value = {requiredValue} onChange = {(e) => setRequiredValue(e.target.value)} ></input>
+        <button type = "button" className = "nextButton" onClick = {nextButton} disabled = {requiredValue === ""}>Next</button>
     </div>
 )}
 
