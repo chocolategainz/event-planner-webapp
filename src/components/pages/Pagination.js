@@ -42,6 +42,7 @@ const reset = () => {
 setCurrentPage(1);
 };
 
+
     return (
               <div className = "container"> 
               <form> 
@@ -49,8 +50,10 @@ setCurrentPage(1);
     <div className = "questionOne">
 <h3>Please enter your name:</h3>
 
-        <input name = "firstname" placeholder = "first name" id="firstName"></input>
-        <input name = "lastname" placeholder = "last name" id="lastName"></input>
+        <input name = "firstname" placeholder = "first name" id="firstName" required></input>
+        <input name = "lastname" placeholder = "last name" id="lastName" required></input>
+  <h3>Please enter your email address:</h3>
+  <input name = "email" placeholder = "example@gmail.com" id = "email" required></input>
         <button type = "button" className = "nextButton" onClick = {nextButton}>Next</button>
     </div>
 )}
@@ -96,7 +99,7 @@ setCurrentPage(1);
     <li>Saturday 12th October 2024, 13:30pm</li>
     <li>Cross Deep, Twickenham, London, TW1 4RB</li>
   </ul>
-  <input type = "radio" id="receptionAttendance" name = "receptionAvailibility" value = "Attending"></input>   
+  <input type = "radio" id="receptionAttendance" name = "receptionAvailibility" value = "Attending" ></input>   
     <label htmlFor = "receptionAttendance">Attending</label>
 
 <input type = "radio" id = "receptionAttendanceDeclined" name = "receptionAvailibility" value = "Not Attending"></input>
