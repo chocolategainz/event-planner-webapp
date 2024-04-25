@@ -162,7 +162,7 @@ setCurrentPage(1);
 <p>
   <input name = "message" placeholder = "optional" id = "message"></input>
 </p>
-<button type = "submit" id = "submitButton" onClick={submit}>Submit</button>
+<button type = "submit">Submit</button>
 <button type = "reset" id = "resetButton" onClick = {reset}>Reset</button> 
 </div>
 )}
