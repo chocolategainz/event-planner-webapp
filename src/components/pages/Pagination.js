@@ -1,47 +1,49 @@
 import React, {useState} from 'react';
 const Pagination = () => { 
-
-  const [inputFields , setInputFields] = useState({
-    name: "" ,
-    surname: "" ,
-    email: "" 
-   }); 
-
+const [currentPage, setCurrentPage] = useState(1); 
+ const [firstName , setFirstName] = useState(''); 
+ const [surname , setSurname] = useState(''); 
+ const [email , setEmail] = useState(''); 
 const [error , setError] = useState({});
-const [submission , setSubmission] = useState(false);
+
   
-const validateData = (inputFields) => {
-  let errors = {};
-  if (inputFields.name.length < 3) {
-    errors.name = "Name is invalid";
+const validateData = () => {
+  const errors = {};
+  if (firstName.length < 3) {
+    errors.firstName = "Name is invalid";
   }
-  if(inputFields.surname.length < 4) {
+  if(surname.length < 4) {
 errors.surname = "Surname is invalid";
   }
-  if (inputFields.email.length < 15) {
+  if (email.length < 15) {
     errors.email = "Email is invalid";
   }
-  return errors; 
+    setError(errors);
+    return Object.keys(errors).length === 0;
 };
+
 console.log(validateData); 
 
 const handleStateChange = (e) => {
-  setInputFields({... inputFields, [e.target.name]: e.target.value});
-  setInputFields({... inputFields, [e.target.surname]: e.target.value});
-  setInputFields({... inputFields, [e.target.email]: e.target.value});
+  const {name , value} = e.target;
+  if (name === 'firstName' ) setFirstName(value);
+  else if (name === 'surname') setSurname(value);
+  else if (name === 'email') setEmail(value);
 };
 
-const [currentPage, setCurrentPage] = useState(1); 
+
 
 const nextButton = (e) => {
-    e.preventDefault();
-   setCurrentPage(currentPage + 1);
+    
+    if (validateData()) {
+  
    if (currentPage === 2) {
      const attending = document.getElementById("attending").checked;
       setCurrentPage(attending ? 3 : 4);
     } else {
       setCurrentPage(currentPage + 1);
     }    
+}
   };
     const prevButton = (e) => {
         e.preventDefault();
@@ -53,11 +55,13 @@ const nextButton = (e) => {
   const note = document.getElementById("submitButton");
 alert("Thank you for submitting a message to us.");
 console.log(note);
-    }
+    };
+
     const finished = (e) => {
        e.preventDefault();
        alert("Thank you! You are now officially added to our guestbook. All of your details will be forwarded to ...")
-    }
+    };
+
 const reset = () => {
   document.getElementById("resetButton");
 setCurrentPage(1);
@@ -66,35 +70,38 @@ setCurrentPage(1);
 
     return (
               <div className = "container"> 
-              <form onSubmit = {submission}> 
+              <form onSubmit = {submit}> 
             {currentPage === 1 && (  
     <div className = "questionOne">
 <h3>Please enter your name:</h3>
 
         <input type = "text"
-        name = "firstname" 
+        name = "firstName" 
         placeholder = "first name" 
         id="firstName"
-        value = {inputFields.name}
-        onChange = {handleStateChange}
+        value = {firstName}
+        onChange = {handleStateChange} 
         ></input>
+{error.firstName && <p className="error">{error.firstName}</p>}
 
         <input type = "text" 
-        name = "lastname" 
+        name = "surname" 
         placeholder = "last name" 
         id="lastName"
-        value = {inputFields.surname}
+        value = {surname}
         onChange = {handleStateChange}
         ></input>
+{error.surname && <p className="error">{error.surname}</p>}
 
   <h3>Please enter your email address:</h3>
   <input type = "email" 
   name = "email" 
   placeholder = "example@gmail.com" 
   id = "email"
-  value = {inputFields.email}
+  value = {email}
   onChange = {handleStateChange}
   ></input>
+  {error.email && <p className="error">{error.email}</p>}
         <button type = "button" className = "nextButton" onClick = {nextButton}>Next</button>
     </div>
 )}
@@ -137,12 +144,12 @@ setCurrentPage(1);
     <li>Saturday 12th October 2024, 13:30pm</li>
     <li>Cross Deep, Twickenham, London, TW1 4RB</li>
   </ul>
-  <input type = "radio" id="receptionAttendance" name = "receptionAvailibility" value = "Attending"></input>   
+    
   <input type = "radio" id="receptionAttendance" name = "receptionAvailibility" value = "Attending" ></input>   
     <label htmlFor = "receptionAttendance">Attending</label>
 
 <input type = "radio" id = "receptionAttendanceDeclined" name = "receptionAvailibility" value = "Not Attending"></input>
-    <label htmlFor = "receptionAttendanceDeclined">Not Attending</label>
+  <label htmlFor = "receptionAttendanceDeclined">Not Attending</label>
 </p>
 <button type = "button" className = "sectionOnePreviousButton" onClick = {prevButton}>Previous</button>
 <button type = "submit" id = "submitButtonSectionFour" onClick = {finished}>Finish</button>  
