@@ -6,7 +6,6 @@ const [currentPage, setCurrentPage] = useState(1);
  const [surname , setSurname] = useState(''); 
  const [email , setEmail] = useState(''); 
 const [attendance , setAttendance] = useState('');
-const [decline, setDecline] = useState('');
 const [error , setError] = useState({});
   
 const validateData = () => {
@@ -23,9 +22,6 @@ errors.surname = "Surname is invalid";
   if (currentPage === 2 && !attendance) { 
   errors.attendance = "You must select one answer!";
 }
- if (currentPage === 2 && !decline) {
-  errors.decline = "You must select one answer!";
-}
     setError(errors);
     return Object.keys(errors).length === 0;
     
@@ -38,14 +34,7 @@ const handleStateChange = (e) => {
   if (name === 'firstName' ) setFirstName(value);
   else if (name === 'surname') setSurname(value);
   else if (name === 'email') setEmail(value);
- 
- else if (type === "radio") {
-    if (name ==="attendance" && checked ) {
-      setAttendance(value);
-    } else if (name === "decline" && checked) {
-      setDecline(value);
-    }
- };
+  else if (name === 'attendance')setAttendance(value);
 };
 
 
@@ -124,29 +113,28 @@ setCurrentPage(1);
   <div className = "questionTwo">
     <h3>Will you be attending the wedding?</h3>
     <p> 
+      {/*Attending*/}
     <input type = "radio" 
     id="attending" 
     name = "attendance" 
     value = "attending"
     onChange = {handleStateChange}
-    checked = {attendance === "attending"}
     required
     ></input>   
     <label htmlFor = "attending">Attending</label> 
 
-    
+{/*Not attending*/}
     <input type = "radio" 
     id = "notAttending" 
-    name = "decline" 
+    name = "attendance" 
     value = "notAttending"
     onChange = {handleStateChange}
-    checked = {decline === "notAttending"}
     required
     ></input>
     <label htmlFor = "notAttending">Not Attending</label>
     
     {/*Error value */}
-    {error.decline && <p className="error">{error.decline}</p>}
+    {error.attendance && <p className="error">{error.attendance}</p>}
 
 {/*Next and Previous buttons */}
     <button type = "button" className = "previousButton" onClick = {prevButton}>Previous</button>
