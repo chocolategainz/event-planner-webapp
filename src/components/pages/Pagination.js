@@ -54,6 +54,11 @@ const nextButton = () => {
         setCurrentPage(currentPage - 1);
        
     };
+
+    const newPrevButton = (e) => {
+      e.preventDefault();
+      setCurrentPage(2);
+    }
     
     const submit = (e) => {
     e.preventDefault();
@@ -156,11 +161,11 @@ setCurrentPage(1);
 </p>
 {/*Radio Buttons for section One */}
 <p>
-<input type = "radio" id="ceremonyAttendance" name = "ceremonyAvailability" value = "Attending"></input>   
+<input type = "radio" id="accept" name = "ceremonyAvailability" value = "accept"></input>   
     <label htmlFor = "ceremonyAttendance">Attending</label> 
     
-<input type = "radio" id = "ceremonyAttendanceDeclined" name = "ceremonyAvailability" value = "Not Attending"></input>
-    <label htmlFor = "ceremonyAttendanceDeclined">Not Attending</label>
+<input type = "radio" id = "decline" name = "ceremonyAvailability" value = "decline"></input>
+    <label htmlFor = "ceremonyDeclined">Not Attending</label>
 </p>
 {/**Reception*/}
 <h3>Reception</h3>
@@ -170,11 +175,11 @@ setCurrentPage(1);
     <li>Cross Deep, Twickenham, London, TW1 4RB</li>
   </ul>
     
-  <input type = "radio" id="receptionAttendance" name = "receptionAvailibility" value = "Attending" ></input>   
+  <input type = "radio" id="confirmed" name = "receptionAvailibility" value = "confirmed" ></input>   
     <label htmlFor = "receptionAttendance">Attending</label>
 
-<input type = "radio" id = "receptionAttendanceDeclined" name = "receptionAvailibility" value = "Not Attending"></input>
-  <label htmlFor = "receptionAttendanceDeclined">Not Attending</label>
+<input type = "radio" id = "rejected" name = "receptionAvailibility" value = "rejected"></input>
+  <label htmlFor = "receptionDeclined">Not Attending</label>
 </p>
 <button type = "button" className = "sectionOnePreviousButton" onClick = {prevButton}>Previous</button>
 <button type = "submit" id = "submitButtonSectionFour" onClick = {finished}>Finish</button>  
@@ -187,9 +192,8 @@ setCurrentPage(1);
 <p>
   <input name = "message" placeholder = "optional" id = "message"></input>
 </p>
-{/** 
-<button type = "button" className = "previousButton" onClick = {prevButton}>Previous</button>
-*/}
+<button type = "button" id = "newPrevButton" onClick = {newPrevButton}>Previous</button>
+
 <button type = "submit">Submit</button>
 <button type = "reset" id = "resetButton" onClick = {reset}>Reset</button> 
 </div>
