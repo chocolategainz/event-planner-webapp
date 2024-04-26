@@ -5,9 +5,9 @@ const [currentPage, setCurrentPage] = useState(1);
  const [firstName , setFirstName] = useState(''); 
  const [surname , setSurname] = useState(''); 
  const [email , setEmail] = useState(''); 
-const [error , setError] = useState({});
 const [attendance , setAttendance] = useState('');
-
+const [decline, setDecline] = useState('');
+const [error , setError] = useState({});
   
 const validateData = () => {
   const errors = {};
@@ -20,9 +20,12 @@ errors.surname = "Surname is invalid";
   if (email.length < 15) {
     errors.email = "Email is invalid";
   }
-  if (attendance.checked ? 3 : currentPage)
+  if (currentPage === 2 && !attendance) { 
   errors.attendance = "You must select one answer!";
-
+}
+ if (currentPage === 2 && !decline) {
+  errors.decline = "You must select one answer!";
+}
     setError(errors);
     return Object.keys(errors).length === 0;
     
@@ -31,16 +34,22 @@ errors.surname = "Surname is invalid";
 console.log(validateData); 
 
 const handleStateChange = (e) => {
-  const {name , value} = e.target;
+  const {name , value, type, checked} = e.target;
   if (name === 'firstName' ) setFirstName(value);
   else if (name === 'surname') setSurname(value);
   else if (name === 'email') setEmail(value);
-  else if (name === 'attendance') setAttendance(value);
+ 
+ else if (type === "radio") {
+    if (name ==="attendance" && checked ) {
+      setAttendance(value);
+    } else if (name === "decline" && checked) {
+      setDecline(value);
+    }
+ };
 };
 
 
-
-const nextButton = (e) => {
+const nextButton = () => {
     if (validateData()) {
   
    if (currentPage === 2) {
@@ -93,7 +102,7 @@ setCurrentPage(1);
         <input type = "text" 
         name = "surname" 
         placeholder = "last name" 
-        id="lastName"
+        id="surname"
         value = {surname}
         onChange = {handleStateChange}
         ></input>
@@ -118,23 +127,32 @@ setCurrentPage(1);
     <input type = "radio" 
     id="attending" 
     name = "attendance" 
-    value = {attendance}
+    value = "attending"
     onChange = {handleStateChange}
+    checked = {attendance === "attending"}
     required
     ></input>   
     <label htmlFor = "attending">Attending</label> 
+
     
     <input type = "radio" 
     id = "notAttending" 
-    name = "attendance" 
-    value = {attendance}
+    name = "decline" 
+    value = "notAttending"
     onChange = {handleStateChange}
+    checked = {decline === "notAttending"}
     required
     ></input>
     <label htmlFor = "notAttending">Not Attending</label>
-    {error.attendance && <p className="error">{error.attendance}</p>}
+    
+    {/*Error value */}
+    {error.decline && <p className="error">{error.decline}</p>}
+
+{/*Next and Previous buttons */}
     <button type = "button" className = "previousButton" onClick = {prevButton}>Previous</button>
-    <button type = "button" className = "nextButton" onClick = {nextButton}>Next</button>  
+    <button type = "button" className = "nextButton" onClick = {nextButton}>Next</button> 
+
+
     </p>
 </div>  
 )}
