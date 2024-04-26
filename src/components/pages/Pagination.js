@@ -30,7 +30,7 @@ errors.surname = "Surname is invalid";
 console.log(validateData); 
 
 const handleStateChange = (e) => {
-  const {name , value, type, checked} = e.target;
+  const {name , value} = e.target;
   if (name === 'firstName' ) setFirstName(value);
   else if (name === 'surname') setSurname(value);
   else if (name === 'email') setEmail(value);
@@ -51,8 +51,9 @@ const nextButton = () => {
   };
     const prevButton = (e) => {
         e.preventDefault();
-        setCurrentPage(currentPage - 1)
-    }
+        setCurrentPage(currentPage - 1);
+       
+    };
     
     const submit = (e) => {
     e.preventDefault();
@@ -116,20 +117,20 @@ setCurrentPage(1);
       {/*Attending*/}
     <input type = "radio" 
     id="attending" 
-    name = "attendance" 
+    name = "attendance"
     value = "attending"
     onChange = {handleStateChange}
-    required
+    checked={attendance === "attending"}
     ></input>   
     <label htmlFor = "attending">Attending</label> 
 
 {/*Not attending*/}
     <input type = "radio" 
     id = "notAttending" 
-    name = "attendance" 
+    name = "attendance"
     value = "notAttending"
     onChange = {handleStateChange}
-    required
+    checked={attendance === "notAttending"}
     ></input>
     <label htmlFor = "notAttending">Not Attending</label>
     
@@ -186,6 +187,9 @@ setCurrentPage(1);
 <p>
   <input name = "message" placeholder = "optional" id = "message"></input>
 </p>
+{/** 
+<button type = "button" className = "previousButton" onClick = {prevButton}>Previous</button>
+*/}
 <button type = "submit">Submit</button>
 <button type = "reset" id = "resetButton" onClick = {reset}>Reset</button> 
 </div>
