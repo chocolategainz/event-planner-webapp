@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
+
 const Pagination = () => { 
 const [currentPage, setCurrentPage] = useState(1); 
  const [firstName , setFirstName] = useState(''); 
  const [surname , setSurname] = useState(''); 
  const [email , setEmail] = useState(''); 
 const [error , setError] = useState({});
+const [attendance , setAttendance] = useState('');
 
   
 const validateData = () => {
@@ -18,8 +20,12 @@ errors.surname = "Surname is invalid";
   if (email.length < 15) {
     errors.email = "Email is invalid";
   }
+  if (attendance.checked ? 3 : currentPage)
+  errors.attendance = "You must select one answer!";
+
     setError(errors);
     return Object.keys(errors).length === 0;
+    
 };
 
 console.log(validateData); 
@@ -29,12 +35,12 @@ const handleStateChange = (e) => {
   if (name === 'firstName' ) setFirstName(value);
   else if (name === 'surname') setSurname(value);
   else if (name === 'email') setEmail(value);
+  else if (name === 'attendance') setAttendance(value);
 };
 
 
 
 const nextButton = (e) => {
-    
     if (validateData()) {
   
    if (currentPage === 2) {
@@ -109,12 +115,24 @@ setCurrentPage(1);
   <div className = "questionTwo">
     <h3>Will you be attending the wedding?</h3>
     <p> 
-    <input type = "radio" id="attending" name = "weddingAttendance" value = "Attending"></input>   
+    <input type = "radio" 
+    id="attending" 
+    name = "attendance" 
+    value = {attendance}
+    onChange = {handleStateChange}
+    required
+    ></input>   
     <label htmlFor = "attending">Attending</label> 
     
-    
-    <input type = "radio" id = "notAttending" name = "weddingAttendance" value = "Not Attending"></input>
+    <input type = "radio" 
+    id = "notAttending" 
+    name = "attendance" 
+    value = {attendance}
+    onChange = {handleStateChange}
+    required
+    ></input>
     <label htmlFor = "notAttending">Not Attending</label>
+    {error.attendance && <p className="error">{error.attendance}</p>}
     <button type = "button" className = "previousButton" onClick = {prevButton}>Previous</button>
     <button type = "button" className = "nextButton" onClick = {nextButton}>Next</button>  
     </p>
