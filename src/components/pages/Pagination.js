@@ -69,7 +69,7 @@ console.log(note);
 
     const finished = (e) => {
        e.preventDefault();
-       alert("Thank you! You are now officially added to our guestbook. All of your details will be forwarded to ...")
+       alert("Thank you! You are now officially added to our guestbook. Please check your email to confirm details")
     };
 
 const reset = () => {
