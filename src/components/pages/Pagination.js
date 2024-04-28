@@ -237,7 +237,7 @@ checked = {receptionAvailability === "rejected"}
 <button type = "button" id = "newPrevButton" onClick = {newPrevButton}>Previous</button>
 
 <button type = "submit">Submit</button>
-<button type = "reset" id = "resetButton" onClick = {reset}>Reset</button> 
+<button type = "reset" id = "resetButton" onClick = {reset}>Restart</button> 
 </div>
 )}
  </form>    
