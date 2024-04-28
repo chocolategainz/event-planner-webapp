@@ -88,6 +88,9 @@ console.log(note);
 const reset = () => {
   document.getElementById("resetButton")
   setCurrentPage(1);
+  setFirstName('');
+  setSurname('');
+  setEmail('');
 };
 
 
