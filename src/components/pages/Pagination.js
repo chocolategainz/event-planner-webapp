@@ -6,6 +6,8 @@ const [currentPage, setCurrentPage] = useState(1);
  const [surname , setSurname] = useState(''); 
  const [email , setEmail] = useState(''); 
 const [attendance , setAttendance] = useState('');
+const [ceremonyAvailability , setCeremonyAvailability] = useState('');
+const [receptionAvailability , setReceptionAvailability] = useState('');
 const [error , setError] = useState({});
   
 const validateData = () => {
@@ -20,8 +22,10 @@ errors.surname = "Surname is invalid";
     errors.email = "Email is invalid";
   }
   if (currentPage === 2 && !attendance) { 
-  errors.attendance = "You must select one answer!";
+  errors.attendance = "You must select an answer!";
 }
+
+
     setError(errors);
     return Object.keys(errors).length === 0;
     
@@ -35,6 +39,8 @@ const handleStateChange = (e) => {
   else if (name === 'surname') setSurname(value);
   else if (name === 'email') setEmail(value);
   else if (name === 'attendance')setAttendance(value);
+  else if (name === 'ceremonyAvailability')setCeremonyAvailability(value);
+  else if (name === 'receptionAvailability')setReceptionAvailability(value);
 };
 
 
@@ -67,14 +73,21 @@ alert("Thank you for submitting a message to us.");
 console.log(note);
     };
 
-    const finished = (e) => {
-       e.preventDefault();
-       alert("Thank you! You are now officially added to our guestbook. Please check your email to confirm details")
-    };
+     const finished = (e) => {
+        e.preventDefault(); 
+        if (!ceremonyAvailability || !receptionAvailability) {
+        alert("Please select an option for both ceremony and reception availability.");
+        return;
+       } else { 
+    } 
+  alert("Thank you! You are now officially added to our guestbook. Please check your email to confirm details");   
+  };
+    
+    
 
 const reset = () => {
-  document.getElementById("resetButton");
-setCurrentPage(1);
+  document.getElementById("resetButton")
+  setCurrentPage(1);
 };
 
 
@@ -150,8 +163,9 @@ setCurrentPage(1);
     </p>
 </div>  
 )}
+
 {currentPage === 3 && (
-<div className = "sectionOne">
+<div className = "pageThree">
 <h3>Ceremony</h3>
 <p> 
 <ul>
@@ -159,13 +173,27 @@ setCurrentPage(1);
   <li>location for ceremony</li>
 </ul>
 </p>
-{/*Radio Buttons for section One */}
+
+
 <p>
-<input type = "radio" id="accept" name = "ceremonyAvailability" value = "accept"></input>   
-    <label htmlFor = "ceremonyAttendance">Attending</label> 
+<input type = "radio" 
+id="accept" 
+name = "ceremonyAvailability" 
+value = "accept"
+onChange = {handleStateChange}
+checked = {ceremonyAvailability === "accept"}
+></input>   
+    <label htmlFor = "accept">Attending</label> 
     
-<input type = "radio" id = "decline" name = "ceremonyAvailability" value = "decline"></input>
-    <label htmlFor = "ceremonyDeclined">Not Attending</label>
+<input type = "radio" 
+id = "decline" 
+name = "ceremonyAvailability"
+ value = "decline"
+ onChange = {handleStateChange}
+ checked = {ceremonyAvailability === "decline"}
+ ></input>
+    <label htmlFor = "decline">Not Attending</label>
+ 
 </p>
 {/**Reception*/}
 <h3>Reception</h3>
@@ -175,16 +203,30 @@ setCurrentPage(1);
     <li>Cross Deep, Twickenham, London, TW1 4RB</li>
   </ul>
     
-  <input type = "radio" id="confirmed" name = "receptionAvailibility" value = "confirmed" ></input>   
-    <label htmlFor = "receptionAttendance">Attending</label>
+  <input type = "radio" 
+  id="confirmed" 
+  name = "receptionAvailability" 
+  value = "confirmed" 
+  onChange = {handleStateChange}
+  checked = {receptionAvailability === "confirmed"}
+  ></input>   
+    <label htmlFor = "confirmed">Attending</label>
 
-<input type = "radio" id = "rejected" name = "receptionAvailibility" value = "rejected"></input>
-  <label htmlFor = "receptionDeclined">Not Attending</label>
+<input type = "radio" 
+id = "rejected" 
+name = "receptionAvailability" 
+value = "rejected"
+onChange = {handleStateChange}
+checked = {receptionAvailability === "rejected"}
+></input>
+  <label htmlFor = "rejected">Not Attending</label>
 </p>
+
 <button type = "button" className = "sectionOnePreviousButton" onClick = {prevButton}>Previous</button>
-<button type = "submit" id = "submitButtonSectionFour" onClick = {finished}>Finish</button>  
+<button type = "submit" className = "submitButtonSectionFour" onClick = {finished}>Finish</button>  
 </div>
 )}
+
 {/**Section Two */}
 {currentPage === 4 && (
   <div className = "sectionTwo">
@@ -198,8 +240,7 @@ setCurrentPage(1);
 <button type = "reset" id = "resetButton" onClick = {reset}>Reset</button> 
 </div>
 )}
- </form>   
- 
+ </form>    
    </div>
     )
 };
