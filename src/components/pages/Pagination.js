@@ -80,7 +80,7 @@ console.log(note);
         return;
        } else { 
     } 
-  alert("Thank you! You are now officially added to our guestbook. Please check your email to confirm details");   
+  alert("Thank you! You are responses have been saved. Please submit another form to update your rsvp status.");   
   };
     
     
