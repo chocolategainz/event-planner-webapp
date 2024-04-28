@@ -86,7 +86,7 @@ console.log(note);
     
 
 const reset = () => {
-  document.getElementById("resetButton")
+  document.getElementsByClassName("resetButton")
   setCurrentPage(1);
   setFirstName('');
   setSurname('');
@@ -226,7 +226,8 @@ checked = {receptionAvailability === "rejected"}
 </p>
 
 <button type = "button" className = "sectionOnePreviousButton" onClick = {prevButton}>Previous</button>
-<button type = "submit" className = "submitButtonSectionFour" onClick = {finished}>Finish</button>  
+<button type = "submit" className = "submitButtonSectionFour" onClick = {finished}>Finish</button> 
+<button type = "reset" id = "resetButton" onClick = {reset}>Restart</button> 
 </div>
 )}
 
@@ -240,7 +241,7 @@ checked = {receptionAvailability === "rejected"}
 <button type = "button" id = "newPrevButton" onClick = {newPrevButton}>Previous</button>
 
 <button type = "submit">Submit</button>
-<button type = "reset" id = "resetButton" onClick = {reset}>Restart</button> 
+<button type = "reset" className = "resetButton" onClick = {reset}>Restart</button> 
 </div>
 )}
  </form>    
