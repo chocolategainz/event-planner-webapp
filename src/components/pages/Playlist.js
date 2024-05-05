@@ -3,6 +3,11 @@ import Spotify from './Spotify Fetch API';
 
 const Playlist = () => {
 
+        const submitForm = (e) => {
+                e.preventDefault();
+                console.log(submitForm);
+        }
+
  return (
         <div className = "container">
 {/*I made an iframe that connects Spotify to my website. I have decided not to have users update the playlist on my website
@@ -16,6 +21,17 @@ If users want to submit another request then they can just type in another song 
  <header>Playlist</header>
 <body>
     <Spotify />
+    <form onSubmit = {submitForm} >
+
+    </form>
+    <p> 
+        <h4>Do you have another song that you would like to hear on our wedding day?</h4>
+        <p>Request a new song here:</p>
+    <div className = "requestSongForm">
+<input type = "text" name = "request" id = "request" size = "40"></input>
+    </div>
+   </p> 
+   <button type = "button" id = "submit" onClick = {submitForm} >Submit</button>
 </body>
         </div>
     
