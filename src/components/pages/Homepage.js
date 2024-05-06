@@ -1,7 +1,11 @@
 const Homepage = () => {
     return ( 
 <div className = "container">
-    <header>Home</header>
+    <header>
+    <h4>
+    Home
+    </h4>
+    </header>
 </div>
 )};
 
