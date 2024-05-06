@@ -1,12 +1,33 @@
-import React from 'react';
 import Spotify from './Spotify Fetch API';
+import React, {useState} from 'react'; 
 
 const Playlist = () => {
+const [error , setError] = useState({});
+const [songName , setSongName] = useState('');
 
-        const submitForm = (e) => {
-                e.preventDefault();
-                console.log(submitForm);
-        }
+  const errorValidation = () => {  
+     const errors = {};
+if(songName.length < 4) {
+        errors.songName = 'Invalid';
+}
+
+setError(errors);
+       return Object.keys(errors).length === 0;
+        };
+
+
+const submitForm = (e) => {
+        e.preventDefault();
+        const validSong = errorValidation();
+if(validSong) {       
+console.log(submitForm);   
+}
+        };
+ 
+        const handleStateChange = (e)  => {
+                const {name , value} = e.target;
+                if (name === 'songName') setSongName(value);
+        };
 
  return (
         <div className = "container">
@@ -21,20 +42,19 @@ If users want to submit another request then they can just type in another song 
  <header>Playlist</header>
 <body>
     <Spotify />
-    <form onSubmit = {submitForm} >
-
-    </form>
-    <p> 
+    <form onSubmit = {submitForm}> 
         <h4>Do you have another song that you would like to hear on our wedding day?</h4>
         <p>Request a new song here:</p>
     <div className = "requestSongForm">
-<input type = "text" name = "request" id = "request" size = "40"></input>
+<input type = "text" name = "songName" id = "request" size = "40" value = {songName} onChange = {handleStateChange}></input>
     </div>
-   </p> 
-   <button type = "button" id = "submit" onClick = {submitForm} >Submit</button>
-</body>
-        </div>
     
+{error.songName && <p className="error">{error.songName}</p>}
+<button type = "submit" id = "submit">Submit</button>
+  
+  </form>  
+ </body>    
+</div> 
 )};
 
 
