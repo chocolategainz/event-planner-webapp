@@ -3,3 +3,14 @@ body {
  background-repeat: no-repeat;
  background-size: cover;
 }    
+
+.boxContainer {
+    margin: 100px 100px;
+    text-align: center;
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
+

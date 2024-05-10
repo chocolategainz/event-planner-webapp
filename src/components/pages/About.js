@@ -1,6 +1,5 @@
 import React from 'react';
-import HappyCouple from './HappyCouple';
-import HappyCoupleImage from './HappyCouple.jpg';
+import PictureTwo from './PictureTwo.jpg'
 import Names from './Names';
 import ImageNames from './Names.jpg'
 
@@ -9,8 +8,9 @@ const About = () => {
 <div className = "container">
     <header>About Us</header>
  
-   <body> 
-    <HappyCouple HappyCoupleImage={HappyCoupleImage} height={550} width={510}/> 
+   <body> </body> 
+    
+<img src = {PictureTwo} alt = "Two people smiling" height = {500}></img>
 
     <p className = "description">
 {/*Placeholder */}
@@ -25,7 +25,7 @@ With each exchanged message, our connection deepened, transcending screens and d
 
 {/*Image of married couple on wedding cards*/}
 <Names ImageNames={ImageNames} height={260} width={450}/>
-    </body> 
+    
 </div>
 
 )};

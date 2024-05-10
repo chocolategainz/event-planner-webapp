@@ -3,12 +3,11 @@ import {Link} from 'react-router-dom';
 //Functional Component
 
 const Navbar = () => {
-    return (
+    return ( 
      <div className='container-wrapper'>
      <div className='container' style={{paddingLeft:0 + 'em'}}>
      <nav className="navbar navbar-expand-lg navbar-light">
      <ul className="navbar-nav">
-     
      <li className="nav-item"><Link className="nav-link" to='/'>Home</Link></li>
      <li className="nav-item"><Link className="nav-link" to='/About'>Our Love Story</Link></li> 
      <li className="nav-item"><Link className="nav-link" to='/Contacts'>Contacts</Link></li> 
