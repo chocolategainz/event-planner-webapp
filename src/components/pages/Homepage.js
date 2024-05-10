@@ -12,10 +12,14 @@ const Homepage = () => {
     Home
     </h4>
     </header>
+     
+<body> 
 
     <main>
-<img src = {PictureTwo} alt = "Two people smiling" width = {1500}></img>
+{/*<img src = {PictureTwo} alt = "Two people smiling" height = {500}></img>*/}
     </main>
+   
+</body>
 </div>
 )};
 
