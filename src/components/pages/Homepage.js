@@ -1,7 +1,5 @@
 import React from "react";
-
-import PictureTwo from "./PictureTwo.jpg";
-import Themes from "./Themes.css";
+import "./Themes.css";
 
 const Homepage = () => {
     return (    
