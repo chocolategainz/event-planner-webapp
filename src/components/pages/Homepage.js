@@ -11,12 +11,11 @@ const Homepage = () => {
 
 <body></body>    
     <main className = 'boxContainer'>
-        {/*Have writing instead of a picture - include names and date of wedding and at the bottom have a button taking
-        the user to the rsvp page */}
 <p>Ian & Jennifer</p>
+{/* <div className = 'borderLine'></div>*/}
 <p>24.10.2024</p>
 <button type="button" class="btn btn-success btn-lg">RSVP</button>
-{/*<img src = {PictureTwo} alt = "Two people smiling" height = {500}></img>*/}
+
 </main>  
 
 </div>
