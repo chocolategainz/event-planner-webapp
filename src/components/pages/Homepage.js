@@ -4,8 +4,7 @@ import "./Themes.css";
 const Homepage = () => {
     return (    
           
-<div className = "container">  
-    <header><h4><u> Home </u></h4></header>  
+<div className = "container">   
 
 <body></body>    
     <main className = 'boxContainer'>

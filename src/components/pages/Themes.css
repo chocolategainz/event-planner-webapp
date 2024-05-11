@@ -18,7 +18,7 @@ body {
 
 .description {
     
-    color:#5f4e12;
+    color:black;
     text-align: center;
     font-weight:light;
     font-family: "Playfair Display" , serif;
@@ -40,24 +40,45 @@ margin-top: 10px;
 
 /*Playlist*/
 
+#playlistTitle {
+    color: #5f4e12;
+    text-decoration: underline;
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
 #submit {
     font-family: "Playfair Display" , serif;
-    font-size:large;
-    color:#5f4e12;
-    font-weight:bolder;
+    margin-bottom: 20px;
 }
 
 .caption {
-    color:#5f4e12;
+    color:black;
     font-weight:light;
     font-family: "Playfair Display" , serif;
     font-size: large;
+    text-align:center;
 }
 
 span {
     color:#5f4e12;
-    font-weight: medium;
+    font-weight: bold;
     font-family: "Playfair Display" , serif;
+    font-size: large;
 }
 
+.listFont {
+    color:black;
+    font-family: "Playfair Display" , serif;
+    font-size: large;
+    font-weight: light;
+}
 
+.requestTitle {
+    color:#5f4e12;
+    font-weight: bold;
+    font-family: "Playfair Display" , serif;
+    font-size: large;
+}

@@ -6,8 +6,7 @@ import './Themes.css';
 const About = () => {
     return ( 
 <div className = "container">
-    <header><h4><u>About Us</u></h4></header>
- 
+   
    <body> </body> 
 <h4 id = "aboutUsTitle">OUR STORY</h4>
 <div class="d-flex justify-content-evenly">

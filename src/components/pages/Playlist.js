@@ -43,18 +43,19 @@ If users want to submit another request then they can just type in another song 
  
 <body></body>
 
-<header><h4><u>Playlist</u></h4></header>      
+<header id = "playlistTitle">PLAYLIST</header>      
 <p className = "caption"> 
 We're thrilled to invite you to be a part of our special day by contributing to the soundtrack of our wedding celebration!
 Your music request will add a personalized touch to the festivities, making memories that will last a lifetime. 
 To ensure that the music reflects the joy and love of the occasion, we kindly ask you to follow these simple steps to submit your song request:
 </p>
 
+<p> 
     <Spotify />
-
+</p>
     <form onSubmit = {submitForm}> 
     <p>
-        <ol>  
+        <ol className = "listFont">  
                 <p> 
                 <li>  
                 <span>Enter Your Song Choice: </span> 
@@ -82,25 +83,21 @@ To ensure that the music reflects the joy and love of the occasion, we kindly as
                 <p>
                 <li>
                <span>Confirmation: </span> 
-                  If your song request is accepted, you'll receive a confirmation email notifying you that 
+                If your song request is accepted, you'll receive a confirmation email notifying you that 
                 your chosen song will be included in the playlist for our wedding reception. 
                 </li>
                  </p>           
         </ol>    
     </p>
 
-        <p className = "requestTitle">Request a new song here:</p>
-    <div className = "requestSongForm">
-<p> 
-<input type = "text" name = "songName" id = "request" size = "40" value = {songName} onChange = {handleStateChange}></input>
-</p>
-    </div>
-    
+<div className = "requestSongForm">
+<p className = "requestTitle">Request a new song here:</p>
+<p><input type = "text" name = "songName" id = "request" size = "40" value = {songName} onChange = {handleStateChange}></input></p>
 {error.songName && <p className="error">{error.songName}</p>}
 <button type = "submit" class="btn btn-success btn-lg" id = "submit">Submit</button>
-   </form>   
-  </div>   
-
+</div>
+ </form>   
+    </div>   
 )};
 
 
