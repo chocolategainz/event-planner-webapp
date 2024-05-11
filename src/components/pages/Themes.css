@@ -6,12 +6,17 @@ body {
 
 /*Homepage*/
 .boxContainer {
-    margin: 100px 100px;
+    margin: 110px 100px; 
+  color:#5f4e12;
     text-align: center;
     font-family: "Playfair Display" , serif;
     font-weight: medium;
     font-style: italic;
     font-size: 100px;
+}
+
+#weddingDate {
+text-decoration: underline;
 }
 
 /*About Us*/
