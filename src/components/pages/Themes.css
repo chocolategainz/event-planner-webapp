@@ -30,6 +30,7 @@ margin-top: 10px;
 }
 
 #aboutUsTitle {
+   color: #5f4e12;
     text-decoration: underline;
     font-family: "Playfair Display" , serif;
     font-weight: medium;
@@ -37,6 +38,26 @@ margin-top: 10px;
     font-size: 100px;
 }
 
+/*Playlist*/
 
+#submit {
+    font-family: "Playfair Display" , serif;
+    font-size:large;
+    color:#5f4e12;
+    font-weight:bolder;
+}
+
+.caption {
+    color:#5f4e12;
+    font-weight:light;
+    font-family: "Playfair Display" , serif;
+    font-size: large;
+}
+
+span {
+    color:#5f4e12;
+    font-weight: medium;
+    font-family: "Playfair Display" , serif;
+}
 
 

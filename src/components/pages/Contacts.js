@@ -15,8 +15,7 @@ Address   Contact info
 */
 
 import React from 'react';
-import Venue from './Venue';
-import VenuePicture from './Venue.jpg';
+import './Themes.css';
 
 const Contacts = () => {
     return ( 
@@ -27,7 +26,7 @@ const Contacts = () => {
 {/*Content*/}
     <p><b>Get in touch</b></p>
     <p>Have any questions about the ceremony or reception?</p>
-
+   
 <div className = "reception">
 <p><b>Reception</b></p>
 <p>
@@ -57,8 +56,13 @@ const Contacts = () => {
     <p>
         <a href = "https://www.alexanderpope.co.uk/">Placeholder</a>
     </p>
-</div>
 
+    <p>Adress</p>
+    <ul>
+        <li></li>
+    </ul>
+
+ </div>
 <div className = "furtherInformation">
     <p><b>If you have any further questions, please do not hesitate to contact me</b></p>
     <p>Contact Information</p>
@@ -68,10 +72,6 @@ const Contacts = () => {
     </ul>
 </div>
 
-{/*Ending page with another image*/}
-<div className = "endingImage">
-    <Venue VenuePicture = {VenuePicture} height = {427} width = {900} />
-</div>
  </div>
 
 )};
