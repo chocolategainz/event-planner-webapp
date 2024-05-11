@@ -22,8 +22,8 @@ With each exchanged message, our connection deepened, transcending screens and d
  And as time wove its gentle tapestry, amidst laughter, tears, and shared dreams, we have decided to stand hand in hand, 
  saying "I do", so that our love story will eternally be etched in the stars.
 
-<p><img src = {Names} className = "cards" alt = "Names on cards" height = {300}></img></p> 
-    </p>
+<img src = {Names} className = "cards" alt = "Names on cards" height = {280}></img></p> 
+    
 </div>
 
     

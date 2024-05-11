@@ -16,7 +16,6 @@ body {
 
 /*About Us*/
 
-
 .description {
     
     color:#5f4e12;
@@ -25,6 +24,9 @@ body {
     font-family: "Playfair Display" , serif;
     font-size: large;
   
+}
+.cards {
+margin-top: 10px;
 }
 
 #aboutUsTitle {
