@@ -12,6 +12,18 @@ body {
     font-style: italic;
     font-size: 100px;
 }
+
+.description {
+    color: #9d801e;
+    text-align: center;
+}
+#aboutUsTitle {
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
 /*
 .borderLine {
     background-color: hotpink;

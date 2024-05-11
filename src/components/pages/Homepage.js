@@ -9,7 +9,7 @@ const Homepage = () => {
 
 <body></body>    
     <main className = 'boxContainer'>
-<p>Ian & Jennifer</p>
+<p>IAN & JENNIFER</p>
 {/* <div className = 'borderLine'></div>*/}
 <p>24.10.2024</p>
 <button type="button" class="btn btn-success btn-lg">RSVP</button>
