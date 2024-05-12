@@ -101,16 +101,16 @@ span {
 
 .formContainer {
     font-family: "Playfair Display" , serif;
-    margin-right: 200px;
+    margin-right: 280px;
 }
 
 .formContent {
     
-       border-color: whitesmoke;
+       border-color: #5f4e12;
     border-width: 5px;
     border-style: solid;
    border-radius: 30px; 
-    background-color: antiquewhite;
+    background-color: #BFBFBF;
     padding: 20px 20px;
     
 }

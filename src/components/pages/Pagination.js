@@ -103,7 +103,7 @@ const reset = () => {
               <form className = "formContent" onSubmit = {submit}> 
             {currentPage === 1 && (  
     <div className = "questionOne">
-<h3>Please enter your name:</h3>
+<h3>Enter your name:</h3>
 
         <input type = "text"
         name = "firstName" 
@@ -123,7 +123,7 @@ const reset = () => {
         ></input>
 {error.surname && <p className="error">{error.surname}</p>}
 
-  <h3>Please enter your email address:</h3>
+  <h3>Enter your email address:</h3>
   <input type = "email" 
   name = "email" 
   placeholder = "example@gmail.com" 
