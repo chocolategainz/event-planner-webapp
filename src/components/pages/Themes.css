@@ -116,5 +116,13 @@ span {
 }
 
 input {
-    margin-left: 10px;
+    margin-left: 5px;
+}
+
+.nextButton , .previousButton , .sectionOnePreviousButton , .submitButtonSectionFour {
+   margin-left: 5px;
+}
+
+.sectionTwo , button {
+    margin-left: 5px;
 }
