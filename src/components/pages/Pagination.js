@@ -97,7 +97,7 @@ const reset = () => {
     return (
               <div className = "container"> 
 
-<header id = "guestbookTitle">Guestbook</header>
+<header id = "guestbookTitle">RSVP</header>
  
 <div className = "formContainer"> 
               <form className = "formContent" onSubmit = {submit}> 
@@ -240,8 +240,14 @@ checked = {receptionAvailability === "rejected"}
   <div className = "sectionTwo">
 <h3>Would you like to send a message to the newly wed couple? </h3>
 <p>
-  <input name = "message" placeholder = "optional" id = "message"></input>
+
+<div class="mb-3">
+  <textarea class="form-control" id="message" rows="3" placeholder = "optional"></textarea>
+
+</div>
+  
 </p>
+
 <button type = "button" id = "newPrevButton" onClick = {newPrevButton}>Previous</button>
 
 <button type = "submit">Submit</button>
