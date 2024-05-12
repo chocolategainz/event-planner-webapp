@@ -1,5 +1,5 @@
 body {
-/* background-image: url("./wallpaper.jpg");  */
+ background-image: url("./wallpaper.jpg");  
  background-repeat: no-repeat;
  background-size: cover;
 }    
@@ -87,4 +87,30 @@ span {
     font-weight: bold;
     font-family: "Playfair Display" , serif;
     font-size: large;
+}
+
+/* Form */
+#guestbookTitle {
+    color: #5f4e12;
+    text-decoration: underline;
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
+.formContainer {
+    font-family: "Playfair Display" , serif;
+    margin-right: 200px;
+}
+
+.formContent {
+    
+       border-color: whitesmoke;
+    border-width: 5px;
+    border-style: solid;
+   border-radius: 30px; 
+    background-color: antiquewhite;
+    padding: 20px 20px;
+    
 }

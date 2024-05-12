@@ -96,7 +96,11 @@ const reset = () => {
 
     return (
               <div className = "container"> 
-              <form onSubmit = {submit}> 
+
+<header id = "guestbookTitle">Guestbook</header>
+ 
+<div className = "formContainer"> 
+              <form className = "formContent" onSubmit = {submit}> 
             {currentPage === 1 && (  
     <div className = "questionOne">
 <h3>Please enter your name:</h3>
@@ -246,6 +250,9 @@ checked = {receptionAvailability === "rejected"}
 )}
  </form>    
    </div>
+
+</div>
+
     )
 };
 export default Pagination;
