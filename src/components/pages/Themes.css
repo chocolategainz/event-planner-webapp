@@ -1,5 +1,5 @@
 body {
-/* background-image: url("./wallpaper.jpg");  */
+ background-image: url("./wallpaper.jpg");  
  background-repeat: no-repeat;
  background-size: cover;
 }    
@@ -19,6 +19,14 @@ body {
 text-decoration: underline;
 }
 
+#countdownTimer {
+    width: 100%;
+    max-width: 798px;
+    border: 0;
+   position:relative;
+   left: 150px;
+   bottom: 90px;
+}
 
 /*About Us*/
 
