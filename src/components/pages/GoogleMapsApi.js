@@ -21,10 +21,9 @@ return (
 <div style = {{height: "100vh"}} >
 <Map minZoom = {10} center = {location} options = {options}>
 <AdvancedMarker position = {location} onClick = {() =>setOpen (true)}>
-    <Pin background = {'gold'} glyphColor={'red'} />
+    <Pin background = {'gold'} glyphColor={'red'} borderColor={'green'} />
 </AdvancedMarker>
-{open && <InfoWindow position={location} onCloseClick={() => setOpen(false)}><p>Alexander Pope</p></InfoWindow>}
-
+{open && <InfoWindow position={location} onCloseClick={() => setOpen(false)}><p>Alexander Pope - Pup & Hotel</p></InfoWindow>}
 </Map>
 </div>
 </APIProvider>
