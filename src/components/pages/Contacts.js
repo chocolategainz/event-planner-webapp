@@ -16,7 +16,7 @@ Address   Contact info
 
 import React from 'react';
 import './Themes.css';
-
+import Maps from './GoogleMapsApi.js';
 
 const Contacts = () => {
 
@@ -47,7 +47,7 @@ const Contacts = () => {
 </ul>
 </div>
 
-<div>React Google Maps</div>
+<Maps />
 
 <p>Contact Information</p>
 <ul>
