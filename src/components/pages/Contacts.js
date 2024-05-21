@@ -17,7 +17,9 @@ Address   Contact info
 import React from 'react';
 import './Themes.css';
 
+
 const Contacts = () => {
+
     return ( 
 <div className = "container">
     <header>Contact Details</header>
@@ -45,6 +47,8 @@ const Contacts = () => {
 </ul>
 </div>
 
+<div>React Google Maps</div>
+
 <p>Contact Information</p>
 <ul>
 <li>020 8892 3050</li>
@@ -57,10 +61,15 @@ const Contacts = () => {
         <a href = "https://www.alexanderpope.co.uk/">Placeholder</a>
     </p>
 
-    <p>Adress</p>
+    <p>Address</p>
     <ul>
-        <li></li>
+        <li>Kingston Registry Office</li>
+        <li>The Old Court House, Room 2</li>
+        <li>High Street</li>
+        <li>Kingston Upon Thames</li>
+        <li>KT1 1EU</li>
     </ul>
+
 
  </div>
 <div className = "furtherInformation">
