@@ -6,12 +6,11 @@ const Homepage = () => {
           
 <div className = "container">   
 
-<body></body>    
+    
     <main className = 'boxContainer'>
 <p>IAN & JENNIFER</p>
 {/* <div className = 'borderLine'></div>*/}
 <p id = "weddingDate">16.10.2024</p>
-<button type="button" id = "RSVP" class="btn btn-success btn-lg">RSVP</button>
 </main>  
 
 {/*Countdown API*/}

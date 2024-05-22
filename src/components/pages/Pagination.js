@@ -238,7 +238,7 @@ checked = {receptionAvailability === "rejected"}
 {/**Section Two */}
 {currentPage === 4 && (
   <div className = "sectionTwo">
-<h3>Would you like to send a message to the newly wed couple? </h3>
+<h3>Would you like to write a message? </h3>
 <p>
 
 <div class="mb-3">
