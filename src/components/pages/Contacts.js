@@ -17,6 +17,7 @@ Address   Contact info
 import React from 'react';
 import './Themes.css';
 import Maps from './GoogleMapsApi.js';
+import Location from './Map Two.js';
 
 const Contacts = () => {
 
@@ -69,9 +70,8 @@ const Contacts = () => {
         <li>Kingston Upon Thames</li>
         <li>KT1 1EU</li>
     </ul>
-
-
  </div>
+ <Location />
 <div className = "furtherInformation">
     <p><b>If you have any further questions, please do not hesitate to contact me</b></p>
     <p>Contact Information</p>

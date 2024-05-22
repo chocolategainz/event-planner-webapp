@@ -23,7 +23,7 @@ return (
 <AdvancedMarker position = {location} onClick = {() =>setOpen (true)}>
     <Pin background = {'gold'} glyphColor={'red'} borderColor={'green'} />
 </AdvancedMarker>
-{open && <InfoWindow position={location} onCloseClick={() => setOpen(false)}><p>Alexander Pope - Pup & Hotel</p></InfoWindow>}
+{open && <InfoWindow position={location} onCloseClick={() => setOpen(false)}><p>Alexander Pope - Pup & Hotel</p><p>Parking is available at on site car park</p></InfoWindow>}
 </Map>
 </div>
 </APIProvider>
