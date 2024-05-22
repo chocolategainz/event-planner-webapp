@@ -13,8 +13,7 @@ const Contacts = () => {
 
 
 {/*Contact Content*/}
-    <p><b>Get in touch</b></p>
-    <p>If you have any questions about the ceremony or reception, then please do not hesitate to contact us:</p>
+    <p className = "contactsCaption">If you have any questions please do not hesitate to get in touch with us:</p>
 
     <p>
         <div className = "himAndHer" >i.escuella@sky.com </div> 
@@ -22,7 +21,7 @@ const Contacts = () => {
        <div className = "himAndHer">j.stone@yahoo.com</div> 
     </p>
 <div className = "ceremonyContainer">
-    <p className = 'ceremony'>Ceremony</p>
+    <p className = 'ceremony'>Wedding Ceremony</p>
     <p>
       <Maps />      
     </p>
@@ -30,7 +29,7 @@ const Contacts = () => {
    
 
 <div className = "receptionContainer">
-<p className = 'reception'>Reception</p>
+<p className = 'reception'>Wedding Reception</p>
 <p>
   <Location />  
 </p>
