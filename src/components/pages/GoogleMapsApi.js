@@ -9,15 +9,14 @@ const options = {
     zoomControl: true,
     fullscreenControl: true,
     mapTypeControl: true,
-    streetViewControl: true,
+    streetViewControl: false,
     draggable: true,
     zoom: 10,
     mapId: '97e73285245f7071'
   };
 
 return ( 
-<APIProvider apiKey = {apiKey} >
-<div>React Google Maps</div>   
+<APIProvider apiKey = {apiKey} > 
 <div style = {{height: "100vh"}} >
 <Map minZoom = {10} center = {location} options = {options}>
 <AdvancedMarker position = {location} onClick = {() =>setOpen (true)}>

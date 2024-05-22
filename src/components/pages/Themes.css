@@ -52,6 +52,48 @@ margin-top: 10px;
     font-size: 100px;
 }
 
+/*Contacts*/
+
+#contactTitle {
+    color: #5f4e12;
+    text-decoration: underline;
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
+.himAndHer {
+    font-family: "Playfair Display" , serif;
+    color: #5d0034;
+    font-weight: 543;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 44px;
+    text-align: center;
+}
+
+.ceremony {
+    font-family: "Playfair Display" , serif;
+    color:	#082351;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+}
+
+.reception {
+    font-family: "Playfair Display" , serif;
+    color:	#bf9b30;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+}
+
+
 /*Playlist*/
 
 #playlistTitle {

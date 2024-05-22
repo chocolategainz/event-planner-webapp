@@ -9,7 +9,7 @@ const mapOptions = {
     zoomControl: true,
     fullscreenControl: true,
     mapTypeControl: true,
-    streetViewControl: true,
+    streetViewControl: false,
     draggable: true,
     zoom: 10,
     mapId: '75fb76c183422447'
@@ -17,11 +17,10 @@ const mapOptions = {
 
 return (
 <APIProvider mapsApiKey = {mapsApiKey} >
-    <div>Wedding Ceremony</div>  
 <div style = {{height: "100vh"}} >
 <Map minZoom = {10} center = {ceremonyLocation} options = {mapOptions}>
 <AdvancedMarker position = {ceremonyLocation} onClick = {() =>setOpen (true)}>
-    <Pin background = {'red'} glyphColor={'green'} borderColor={'gold'} />
+    <Pin background = {'green'} glyphColor={'red'} borderColor={'gold'} />
 </AdvancedMarker>
 {open && <InfoWindow position={ceremonyLocation} onCloseClick={() => setOpen(false)}><p>The Guildhall</p></InfoWindow>}
 </Map>
