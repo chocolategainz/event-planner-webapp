@@ -4,11 +4,13 @@ import React from 'react';
 import './Themes.css';
 import Maps from './GoogleMapsApi.js';
 import Location from './Map Two.js';
-
+;
 const Contacts = () => {
 
     return ( 
+        
 <div className = "container">
+   
     <header id = 'contactTitle'>Contact Details</header>
 
 

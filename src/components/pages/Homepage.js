@@ -1,12 +1,11 @@
 import React from "react";
 import "./Themes.css";
+import Example from './Example';
 
 const Homepage = () => {
-    return (    
-          
+    return (      
 <div className = "container">   
-
-    
+<Example />
     <main className = 'boxContainer'>
 <p>IAN & JENNIFER</p>
 {/* <div className = 'borderLine'></div>*/}
