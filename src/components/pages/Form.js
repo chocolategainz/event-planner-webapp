@@ -4,8 +4,10 @@ import './Themes.css';
 
 const Form = () => {
     return (
+        
      <Pagination /> 
-      
+     
+     
     )
 };
 

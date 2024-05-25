@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Example from './Example';
 
 const Pagination = () => { 
 const [currentPage, setCurrentPage] = useState(1); 
@@ -95,12 +96,15 @@ const reset = () => {
 
 
     return (
-              <div className = "container"> 
-
+      
+  <div className = "container"> 
+<Example/> 
 <header id = "guestbookTitle">RSVP</header>
  
 <div className = "formContainer"> 
+  
               <form className = "formContent" onSubmit = {submit}> 
+                     
             {currentPage === 1 && (  
     <div className = "questionOne">
 <h3>Enter your name:</h3>

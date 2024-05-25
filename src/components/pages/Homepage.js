@@ -7,6 +7,7 @@ const Homepage = () => {
 <div className = "container">   
 <Example />
     <main className = 'boxContainer'>
+        
 <p>IAN & JENNIFER</p>
 {/* <div className = 'borderLine'></div>*/}
 <p id = "weddingDate">16.10.2024</p>

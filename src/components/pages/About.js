@@ -2,12 +2,13 @@ import React from 'react';
 import PictureTwo from './PictureTwo.jpg';
 import Names from './Names.jpg';
 import './Themes.css';
+import Example from './Example';
 
 const About = () => {
     return ( 
 <div className = "container">
-   
-   <body> </body> 
+<Example />
+    
 <h4 id = "aboutUsTitle">OUR STORY</h4>
 <div class="d-flex justify-content-evenly">
  <img src = {PictureTwo} className = "mainPicture" alt = "Two people smiling" height = {450}></img>

@@ -1,6 +1,7 @@
 import Spotify from './Spotify Fetch API';
 import React, {useState} from 'react'; 
 import './Themes.css';
+import Example from './Example';
 
 const Playlist = () => {
 const [error , setError] = useState({});
@@ -41,7 +42,7 @@ the owners can update the playlist. The playlist on my website will show preview
 but on the day of the wedding, the full songs will be played either by the DJ or themselves (on my premium account without ads).
 If users want to submit another request then they can just type in another song of interest. */}
  
-<body></body>
+<Example />
 
 <header id = "playlistTitle">PLAYLIST</header>      
 <p className = "caption"> 
