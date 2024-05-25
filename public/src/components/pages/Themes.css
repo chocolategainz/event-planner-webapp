@@ -1,0 +1,185 @@
+body {
+ /*background-image: url("./wallpaper.jpg"); */
+ background-repeat: no-repeat;
+ background-size: cover;
+}    
+
+/*Homepage*/
+.boxContainer {
+    padding: 110px 100px; 
+  color:#5f4e12;
+    text-align: center;
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
+#weddingDate {
+text-decoration: underline;
+}
+
+#countdownTimer {
+    width: 100%;
+    max-width: 798px;
+    border: 0;
+   position:relative;
+   left: 150px;
+   bottom: 90px;
+}
+
+/*About Us*/
+
+.description {
+    
+    color:black;
+    text-align: center;
+    font-weight:light;
+    font-family: "Playfair Display" , serif;
+    font-size: large;
+  
+}
+.cards {
+margin-top: 10px;
+}
+
+#aboutUsTitle {
+   color: #5f4e12;
+    text-decoration: underline;
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
+/*Contacts*/
+
+#contactTitle {
+    color: #5f4e12;
+    text-decoration: underline;
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
+.himAndHer {
+    font-family: "Playfair Display" , serif;
+    color: #5d0034;
+    font-weight: 543;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 44px;
+    text-align: center;
+}
+
+.ceremony {
+    font-family: "Playfair Display" , serif;
+    color:	#082351;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+}
+
+.reception {
+    font-family: "Playfair Display" , serif;
+    color:	#bf9b30;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+}
+
+.contactsCaption {
+    color:black;
+    font-weight:light;
+    font-family: "Playfair Display" , serif;
+    text-align: center;
+    font-size: 22px;
+}
+
+/*Playlist*/
+
+#playlistTitle {
+    color: #5f4e12;
+    text-decoration: underline;
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
+#submit {
+    font-family: "Playfair Display" , serif;
+    margin-bottom: 20px;
+}
+
+.caption {
+    color:black;
+    font-weight:light;
+    font-family: "Playfair Display" , serif;
+    font-size: large;
+    text-align:center;
+}
+
+span {
+    color:#5f4e12;
+    font-weight: bold;
+    font-family: "Playfair Display" , serif;
+    font-size: large;
+}
+
+.listFont {
+    color:black;
+    font-family: "Playfair Display" , serif;
+    font-size: large;
+    font-weight: light;
+}
+
+.requestTitle {
+    color:#5f4e12;
+    font-weight: bold;
+    font-family: "Playfair Display" , serif;
+    font-size: large;
+}
+
+/* Form */
+#guestbookTitle {
+    color: #5f4e12;
+    text-decoration: underline;
+    font-family: "Playfair Display" , serif;
+    font-weight: medium;
+    font-style: italic;
+    font-size: 100px;
+}
+
+.formContainer {
+    font-family: "Playfair Display" , serif;
+    margin-right: 280px;
+}
+
+.formContent {
+    
+    border-color: #5f4e12;
+    border-width: 5px;
+    border-style: solid;
+   border-radius: 30px; 
+    background-color: #BFBFBF;
+    padding: 20px 20px;
+    
+}
+
+input {
+    margin-left: 5px;
+}
+
+.nextButton , .previousButton , .sectionOnePreviousButton , .submitButtonSectionFour {
+   margin-left: 5px;
+}
+
+.sectionTwo , button {
+    margin-left: 5px;
+}
